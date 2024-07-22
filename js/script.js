@@ -7,3 +7,5 @@ const remainingSpan = document.querySelector(".remaining span");
 const messageParagraph = document.querySelector(".message");
 const playButton = document.querySelector(".play-again");
 const word = "magnolia";
+//test variables!
+//console.log(textInput); tested all variables!
