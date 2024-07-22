@@ -9,3 +9,19 @@ const playButton = document.querySelector(".play-again");
 const word = "magnolia";
 //test variables!
 //console.log(textInput); tested all variables!
+
+const pendingLetters = function (word) {
+    wordMaking.innerText = "●";
+    const letterList = [];
+    console.log(letterList.join(""));
+};
+
+pendingLetters(word);
+
+
+guessButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    const guess = textInput.value;
+    console.log(guess);
+    textInput.value = "";
+});
