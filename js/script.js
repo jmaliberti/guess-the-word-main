@@ -18,6 +18,12 @@ const pendingLetters = function (word) {
     }
     wordInProgess.innerText = (letterList.join(""));
 };
+//^^By adding "word" to the function's parameters, 
+//you are using "magnolia" as the source of information.
+//The letterList array is empty in order to hold the circles as they come up.
+//Using push() forces the circles into the array for display,
+//and the "letter" (could be any word) being "of" magnolia, 
+//means it's pulling from the word for info, i.e. breaking it down to the letters.
 
 pendingLetters(word);
 
