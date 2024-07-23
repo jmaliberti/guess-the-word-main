@@ -14,9 +14,9 @@ const pendingLetters = function (word) {
     const letterList = [];
     for (const letter of word) {
         console.log(letter);
-        wordInProgess.innerText = "●";
+        letterList.push("●");
     }
-    console.log(letterList.join(""));
+    wordInProgess.innerText = (letterList.join(""));
 };
 
 pendingLetters(word);
