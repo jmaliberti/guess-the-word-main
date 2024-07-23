@@ -1,7 +1,7 @@
 const guessedLetters = document.querySelector(".guessed-letters");
 const guessButton = document.querySelector(".guess");
 const textInput = document.querySelector("#letter");
-const wordMaking = document.querySelector(".word-in-progress");
+const wordInProgess = document.querySelector(".word-in-progress");
 const remainingGuesses = document.querySelector(".remaining");
 const remainingSpan = document.querySelector(".remaining span");
 const messageParagraph = document.querySelector(".message");
@@ -11,8 +11,11 @@ const word = "magnolia";
 //console.log(textInput); tested all variables!
 
 const pendingLetters = function (word) {
-    wordMaking.innerText = "●";
     const letterList = [];
+    for (const letter of word) {
+        console.log(letter);
+        wordInProgess.innerText = "●";
+    }
     console.log(letterList.join(""));
 };
 
