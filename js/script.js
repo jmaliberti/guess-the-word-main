@@ -4,7 +4,7 @@ const textInput = document.querySelector("#letter");
 const wordInProgess = document.querySelector(".word-in-progress");
 const remainingGuesses = document.querySelector(".remaining");
 const remainingSpan = document.querySelector(".remaining span");
-const messageParagraph = document.querySelector(".message");
+const messageParagraph = document.querySelector(".message p");
 const playButton = document.querySelector(".play-again");
 const word = "magnolia";
 //test variables!
@@ -31,22 +31,25 @@ pendingLetters(word);
 guessButton.addEventListener("click", function (e) {
     e.preventDefault();
     const guess = textInput.value;
-    console.log(guess);
-    textInput.value = "";
+    const goodGuess = validate(guess);
 });
 
-const validate = function (textInput) {
+const validate = function (input) {
     const acceptedLetter = /[a-zA-Z]/;
-    if (textInput === "") {
-
+    //if empty
+    if (input.length === 0) {
+        messageParagraph.innerText = "Nothing there!"; 
     }
-    else if (textInput !== acceptedLetter) {
-        
+    //if not a letter
+    else if (!input.match(acceptedLetter)) {
+        messageParagraph.innerText = "Not a letter!";
     }
-    else if (textInput ===(acceptedLetter+1)) {
-
+    //if too many
+    else if (input.length > 1) {
+        messageParagraph.innerText = "Too many letters!";
     }
+    //if good
     else {
-        return(textInput);
-    };
+        return textInput;
+    }
 };
