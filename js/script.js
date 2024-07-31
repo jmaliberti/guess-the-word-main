@@ -30,6 +30,7 @@ pendingLetters(word);
 
 guessButton.addEventListener("click", function (e) {
     e.preventDefault();
+    messageParagraph.innerText = "";
     const guess = textInput.value;
     const goodGuess = validate(guess);
 });
