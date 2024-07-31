@@ -1,4 +1,4 @@
-const guessedLetters = document.querySelector(".guessed-letters");
+const guessedLettersList = document.querySelector(".guessed-letters");
 const guessButton = document.querySelector(".guess");
 const textInput = document.querySelector(".letter");
 const wordInProgess = document.querySelector(".word-in-progress");
@@ -6,7 +6,9 @@ const remainingGuesses = document.querySelector(".remaining");
 const remainingSpan = document.querySelector(".remaining span");
 const messageParagraph = document.querySelector(".message p");
 const playButton = document.querySelector(".play-again");
+
 const word = "magnolia";
+const guessedLetters = [];
 //test variables!
 //console.log(textInput); tested all variables!
 
@@ -33,7 +35,7 @@ guessButton.addEventListener("click", function (e) {
     messageParagraph.innerText = "";
     const guess = textInput.value;
     const goodGuess = validate(guess);
-    console.log(goodGuess);
+    //console.log(goodGuess);
 });
 
 const validate = function (input) {
@@ -55,3 +57,5 @@ const validate = function (input) {
         return textInput;
     }
 };
+
+const makeGuess = function (guess) {};
