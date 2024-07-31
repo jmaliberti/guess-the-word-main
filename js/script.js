@@ -36,6 +36,9 @@ guessButton.addEventListener("click", function (e) {
     const guess = textInput.value;
     const goodGuess = validate(guess);
     //console.log(goodGuess);
+    if (goodGuess) {
+        makeGuess(guess);
+      }
 });
 
 const validate = function (input) {
@@ -58,4 +61,13 @@ const validate = function (input) {
     }
 };
 
-const makeGuess = function (guess) {};
+const makeGuess = function (guess) {
+    guess = guess.toUpperCase();
+    if (guessedLetters = includes(guess)) {
+        messageParagraph.innerText = "Repeated letter, try again!";
+    }
+    else {
+        guessedLetters.push(guess);
+        console.log(guessedLetters);
+    }
+};
