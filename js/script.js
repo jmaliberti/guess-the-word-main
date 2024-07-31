@@ -1,6 +1,6 @@
 const guessedLetters = document.querySelector(".guessed-letters");
 const guessButton = document.querySelector(".guess");
-const textInput = document.querySelector("#letter");
+const textInput = document.querySelector(".letter");
 const wordInProgess = document.querySelector(".word-in-progress");
 const remainingGuesses = document.querySelector(".remaining");
 const remainingSpan = document.querySelector(".remaining span");
@@ -33,6 +33,7 @@ guessButton.addEventListener("click", function (e) {
     messageParagraph.innerText = "";
     const guess = textInput.value;
     const goodGuess = validate(guess);
+    console.log(goodGuess);
 });
 
 const validate = function (input) {
