@@ -4,7 +4,7 @@ const textInput = document.querySelector(".letter");
 const wordInProgess = document.querySelector(".word-in-progress");
 const remainingGuesses = document.querySelector(".remaining");
 const remainingSpan = document.querySelector(".remaining span");
-const messageParagraph = document.querySelector(".message p");
+const messageParagraph = document.querySelector(".message");
 const playButton = document.querySelector(".play-again");
 
 const word = "magnolia";
