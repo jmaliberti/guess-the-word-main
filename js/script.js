@@ -63,7 +63,7 @@ const validate = function (input) {
 
 const makeGuess = function (guess) {
     guess = guess.toUpperCase();
-    if (guessedLetters = includes(guess)) {
+    if (guessedLetters.includes(guess)) {
         messageParagraph.innerText = "Repeated letter, try again!";
     }
     else {
