@@ -71,3 +71,8 @@ const makeGuess = function (guess) {
         console.log(guessedLetters);
     }
 };
+
+const guessDisplay = function () {
+    guessedLettersList.innerText = "";
+    
+};
