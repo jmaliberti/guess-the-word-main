@@ -75,5 +75,8 @@ const makeGuess = function (guess) {
 
 const guessDisplay = function () {
     guessedLettersList.innerHTML = "";
-    
+    for (const letter of guessedLettersList) {
+        const li = document.createElement("li");
+        
+    }
 };
