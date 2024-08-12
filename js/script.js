@@ -74,6 +74,6 @@ const makeGuess = function (guess) {
 };
 
 const guessDisplay = function () {
-    guessedLettersList.innerText = "";
+    guessedLettersList.innerHTML = "";
     
 };
